@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteTodo, toggleModal, toggleTodo } from "./todoSlice";
-import { Button, Table, Tag, Space, Checkbox, Typography } from "antd";
+import { Button, Table, Tag, Space, Checkbox, Typography, Popconfirm } from "antd";
 const { Text } = Typography;
 const Todo = () => {
   // Define dispatch for updating the store
@@ -67,9 +67,15 @@ const Todo = () => {
           <Button onClick={() => dispatch(toggleModal(record.key))}>
             Edit
           </Button>
-          <Button onClick={() => dispatch(deleteTodo({ key: record.key }))}>
-            Delete
-          </Button>
+          <Popconfirm
+            title="Delete the Todo"
+            description="Are you sure to delete this Todo?"
+            onConfirm={() => dispatch(deleteTodo({ key: record.key }))}
+            okText="Yes"
+            cancelText="No"
+          >
+            <Button danger>Delete</Button>
+          </Popconfirm>
         </Space>
       ),
     },
