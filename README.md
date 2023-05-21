@@ -1,6 +1,6 @@
-# Test Task, TodoList
+# Test Task, TodoList [HERE](https://todolist-tim.web.app/)
 
-Its demo is deployed on Firebase Hosting [HERE](https://todolist-tim.web.app/).
+### Deployed on Firebase Hosting [(https://todolist-tim.web.app/)]
 
 ## Available Scripts
 
