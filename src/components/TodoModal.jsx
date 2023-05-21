@@ -52,7 +52,7 @@ const TodoModal = () => {
           <Input />
         </Form.Item>
         <Form.Item name="description" label="Description">
-          <Input.TextArea />
+          <Input.TextArea rows={4} />
         </Form.Item>
         <Form.Item wrapperCol={{ offset: 4 }} style={{ margin: 0 }}>
           <Button size="large" shape="round" type="primary" htmlType="submit">

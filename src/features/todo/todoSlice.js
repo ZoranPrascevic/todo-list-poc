@@ -8,24 +8,59 @@ const todoSlice = createSlice({
     todos: [
       {
         key: 1,
-        title: 'Task 1',
-        description: 'This is task 1.',
+        title: 'Conquer Mount Everest',
+        description: 'Embark on an epic adventure and climb the highest peak in the world. Prepare yourself for a challenging expedition and enjoy breathtaking views from the summit.',
         state: false,
-        createdTime: Date.now()
+        createdTime: Date.now(),
       },
       {
         key: 2,
-        title: 'Task 2',
-        description: 'This is task 2.',
-        state: true,
-        createdTime: Date.now()
+        title: 'Learn to Play the Ukulele',
+        description: 'Strum your way to happiness with the delightful sounds of the ukulele. Dive into tutorials, practice chords, and serenade your friends and family with your newfound musical talent.',
+        state: false,
+        createdTime: Date.now(),
       },
       {
         key: 3,
-        title: 'Task 3',
-        description: 'This is task 3.',
+        title: 'Build a Sandcastle',
+        description: 'Head to the beach armed with buckets and shovels. Let your creativity flow as you sculpt a magnificent sandcastle, complete with turrets, moats, and seashell decorations.',
+        state: true,
+        createdTime: Date.now(),
+      },
+      {
+        key: 4,
+        title: 'Host a Game Night Extravaganza',
+        description: 'Gather your friends for an unforgettable game night. Prepare a variety of board games, card games, and snacks for an evening filled with laughter, friendly competition, and lots of fun.',
         state: false,
-        createdTime: Date.now()
+        createdTime: Date.now(),
+      },
+      {
+        key: 5,
+        title: 'Create a DIY Terrarium',
+        description: 'Get your hands dirty and unleash your inner gardener by building a beautiful terrarium. Select your favorite plants, layer the soil and rocks, and design a miniature ecosystem that brings nature indoors.',
+        state: true,
+        createdTime: Date.now(),
+      },
+      {
+        key: 6,
+        title: 'Master the Art of Latte Art',
+        description: 'Become a barista extraordinaire and learn the techniques of creating stunning latte art. From hearts to ferns, hone your skills in pouring and drawing patterns on creamy coffee creations.',
+        state: false,
+        createdTime: Date.now(),
+      },
+      {
+        key: 7,
+        title: 'Organize a Costume Party',
+        description: 'Let your imagination run wild and throw a themed costume party. Whether it\'s superheroes, fairy tales, or movie characters, dress up, have a blast, and capture memorable moments.',
+        state: false,
+        createdTime: Date.now(),
+      },
+      {
+        key: 8,
+        title: 'Write a Short Story',
+        description: 'Unleash your creativity and weave a captivating tale. Develop interesting characters, create engaging plots, and transport readers to a world of imagination with your storytelling skills.',
+        state: true,
+        createdTime: Date.now(),
       },
     ],
   },
@@ -33,7 +68,7 @@ const todoSlice = createSlice({
     // add a new todo
     addTodo: (state, action) => {
       const newTodo = {
-        key: state.todos.length + 1,
+        key: Date.now(),
         title: action.payload.title,
         description: action.payload.description,
         state: false,
