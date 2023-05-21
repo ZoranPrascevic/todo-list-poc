@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Test Task, TodoList
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Its demo is deployed on Firebase Hosting [HERE](https://todolist-tim.web.app/).
 
 ## Available Scripts
 

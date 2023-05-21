@@ -1,6 +1,6 @@
 {
-  "name": "zoran-todo",
-  "version": "0.1.0",
+  "name": "todo-demo",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",

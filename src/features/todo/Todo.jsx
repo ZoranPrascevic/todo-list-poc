@@ -1,7 +1,8 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteTodo, toggleModal, toggleTodo } from "./todoSlice";
-import { Button, Table, Tag, Space, Checkbox } from "antd";
+import { Button, Table, Tag, Space, Checkbox, Typography } from "antd";
+const { Text } = Typography;
 const Todo = () => {
   // Define dispatch for updating the store
   const dispatch = useDispatch();
@@ -33,15 +34,17 @@ const Todo = () => {
     },
     {
       title: "Title",
-      dataIndex: "title",
       key: "title",
       ellipsis: true,
+      render: (_, record) => <Text delete={record.state}>{record.title}</Text>,
     },
     {
       title: "Description",
-      dataIndex: "description",
       key: "description",
       ellipsis: true,
+      render: (_, record) => (
+        <Text delete={record.state}>{record.description}</Text>
+      ),
     },
     {
       title: "Status",

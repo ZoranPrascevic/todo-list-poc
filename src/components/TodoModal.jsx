@@ -29,7 +29,7 @@ const TodoModal = () => {
       // Set the title of the modal based on whether or not editData exists
       title={editData ? "Edit Todo" : "Add a new Todo"}
       // Set the visibility of the modal based on the modalOpen state
-      visible={modalOpen}
+      open={modalOpen}
       // Set the onCancel callback to dispatch a toggleModal action
       onCancel={() => dispatch(toggleModal())}
       // Hide the footer of the modal
